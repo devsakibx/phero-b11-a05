@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - DevBoard</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body class="bg-indigo-50 font-sans">
+
+    <!-- Header -->
+    <header class="bg-white rounded-lg  shadow-md py-4 px-6 max-w-6xl mx-auto mt-4">
+        <div class="flex justify-between items-center max-w-6xl mx-auto">
+            <!-- Logo and Title -->
+            <div class="flex items-center space-x-2">
+                <img src="./assets/logo.png" alt="Logo" class="w-8 h-8"> <!-- Logo Image -->
+                <h1 class="text-xl font-light">Dev<span class="font-semibold">Board</span></h1>
+            </div>
+
+            <!-- Back to Desk Button -->
+            <button id="backToDeskBtn"
+                class="bg-indigo-700 text-white py-3 px-6 rounded-lg hover:bg-indigo-800 transition duration-300">
+                Back to Desk
+            </button>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="p-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Blogs</h2>
+
+            <!-- Blog Cards -->
+            <div class="space-y-6">
+                <!-- Blog 1 -->
+                <!-- Blog 1 -->
+                <!-- Blog 1 -->
+                <div class="bg-white border border-gray-200 shadow-md rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Question 1: What are the different ways to select an
+                        element in the DOM?</h3>
+
+                    <!-- Dashed Line Separator -->
+                    <hr class="my-4 border-t-2 border-dashed border-gray-300 mx-6">
+
+                    <p class="text-sm text-gray-600 mt-2">There are several ways to select an element in the DOM
+                        (Document Object Model). The <span class="font-semibold">getElementById()</span> method can be
+                        used to select an element by its unique ID. To select elements by their class name, the <span
+                            class="font-semibold">getElementsByClassName()</span> method is used, which returns a live
+                        HTMLCollection of elements. The <span class="font-semibold">getElementsByTagName()</span> method
+                        selects elements by their tag name and also returns a live HTMLCollection. To select the first
+                        element that matches a CSS selector, the <span class="font-semibold">querySelector()</span>
+                        method is utilized. The <span class="font-semibold">querySelectorAll()</span> method selects all
+                        elements that match a given CSS selector and returns a NodeList. The <span
+                            class="font-semibold">children</span> property selects all child elements of a specific
+                        parent element. Lastly, the <span class="font-semibold">closest()</span> method selects the
+                        nearest ancestor of an element that matches a CSS selector. These methods are commonly used to
+                        select elements in the DOM.
+                    </p>
+                </div>
+
+                <!-- Blog 2 -->
+                <div class="bg-white border border-gray-200 shadow-md rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Question 2: What is the difference between
+                        innerHTML, innerText, and textContent?</h3>
+
+                    <!-- Dashed Line Separator -->
+                    <hr class="my-4 border-t-2 border-dashed border-gray-300 mx-6">
+
+                    <p class="text-sm text-gray-600 mt-2">The properties <span class="font-semibold">innerHTML</span>,
+                        <span class="font-semibold">innerText</span>, and <span class="font-semibold">textContent</span>
+                        are used to retrieve or set the content of an element, but they behave differently. The <span
+                            class="font-semibold">innerHTML</span> property retrieves or sets the HTML content inside an
+                        element, including any HTML tags. It returns the content as a string and allows HTML elements to
+                        be injected into the DOM. However, it can expose the page to cross-site scripting (XSS)
+                        vulnerabilities if untrusted data is used. The <span class="font-semibold">innerText</span>
+                        property retrieves or sets the visible text inside an element, considering the styles that may
+                        hide text, such as display: none or visibility: hidden. It returns only the visible text,
+                        excluding any HTML tags. In contrast, the <span class="font-semibold">textContent</span>
+                        property retrieves or sets the text content of an element, but unlike <span
+                            class="font-semibold">innerText</span>, it doesn't take CSS styling into account. It
+                        provides all text content, even if it is hidden by CSS. To summarize, <span
+                            class="font-semibold">innerHTML</span> includes HTML tags, <span
+                            class="font-semibold">innerText</span> gives only the visible text, considering styling, and
+                        <span class="font-semibold">textContent</span> provides all text, regardless of visibility, and
+                        does not interpret HTML tags.
+                    </p>
+                </div>
+
+                <!-- Blog 3 -->
+                <div class="bg-white border border-gray-200 shadow-md rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Question 3: What is event delegation in the DOM?
+                    </h3>
+
+                    <!-- Dashed Line Separator -->
+                    <hr class="my-4 border-t-2 border-dashed border-gray-300 mx-6">
+
+                    <p class="text-sm text-gray-600 mt-2">Event delegation in the DOM is a technique where a single
+                        event listener is added to a parent element instead of individual child elements. The event
+                        listener uses the concept of "<span class="font-semibold">bubbling</span>," meaning it listens
+                        for events that propagate up from the target element to the parent. When an event occurs on a
+                        child element, it bubbles up to the parent, which can handle the event. This approach improves
+                        performance, especially when there are many child elements that need to listen for the same
+                        event, as it reduces the number of event listeners required. Event delegation works by checking
+                        the event target to see if it matches the intended child element. This allows dynamically added
+                        child elements to be handled by the same parent listener. In simpler terms, instead of binding
+                        an event listener to each child element, a single listener on the parent can catch events from
+                        any child element, making it a more efficient way of handling events in the DOM.
+                    </p>
+                </div>
+
+                <!-- Blog 4 -->
+                <div class="bg-white border border-gray-200 shadow-md rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Question 4: What is event bubbling in the DOM?</h3>
+
+                    <!-- Dashed Line Separator -->
+                    <hr class="my-4 border-t-2 border-dashed border-gray-300 mx-6">
+
+                    <p class="text-sm text-gray-600 mt-2">Event bubbling in the DOM is a process in which an event, such
+                        as a click or keypress, starts from the innermost element that triggered the event (the target
+                        element) and then bubbles up to its parent elements, continuing up the DOM tree until it reaches
+                        the root element. During this process, each parent element along the way has the opportunity to
+                        listen for and handle the event. This behavior allows for centralized event handling, where a
+                        parent element can handle events for its child elements without needing individual event
+                        listeners for each one.
+
+                        For example, if a click event occurs on a button inside a div, the event will first trigger on
+                        the button and then bubble up to the div, then the body, and so on, up to the root of the
+                        document. This allows the parent elements to respond to events that happen on their child
+                        elements.
+
+                        Event bubbling can be stopped using the <span class="font-semibold">stopPropagation()</span>
+                        method, which prevents the event from propagating further up the DOM tree. However, by default,
+                        events bubble, making it a useful feature for <span class="font-semibold">event
+                            delegation</span> and efficient event handling.
+                    </p>
+                </div>
+
+                <!-- Blog 5 -->
+                <div class="bg-white border border-gray-200 shadow-md rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Question 5: How do you create, add, and remove
+                        elements using JavaScript?</h3>
+
+                    <!-- Dashed Line Separator -->
+                    <hr class="my-4 border-t-2 border-dashed border-gray-300 mx-6">
+
+                    <p class="text-sm text-gray-600 mt-2">To create, add, and remove elements using JavaScript, several
+                        methods can be employed. First, to create a new element, the <span
+                            class="font-semibold">document.createElement()</span> method is used. This method generates
+                        a new HTML element of the specified type but does not yet add it to the DOM. Once the element is
+                        created, it can be modified by adding content or attributes. For instance, the <span
+                            class="font-semibold">textContent</span> or <span class="font-semibold">innerHTML</span>
+                        property can be used to set the content, while the <span
+                            class="font-semibold">setAttribute()</span> method allows attributes to be added. Afterward,
+                        to insert the new element into the DOM, the <span class="font-semibold">appendChild()</span>
+                        method is used, which appends the element as the last child of a specified parent element.
+                        Finally, to remove an element, you can use the <span class="font-semibold">removeChild()</span>
+                        method on the parent element or the <span class="font-semibold">remove()</span> method directly
+                        on the element itself. These methods provide the basic functionality needed to manipulate the
+                        DOM by adding, modifying, and removing elements.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const backButton = document.getElementById('backToDeskBtn');
+
+        backButton.addEventListener('click', () => {
+            window.location.href = './index.html';
+        });
+    </script>
+
+</body>
+
+</html>
